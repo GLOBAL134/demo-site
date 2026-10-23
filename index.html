@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Организация стильных свадеб под ключ на любой бюджет">
+    <title>Белый день — демо сайта свадебного агентства</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="demo-notice">Демонстрация сайта свадебного агентства. Услуги, цены и истории приведены для примера. Заявки не отправляются.</div>
+
+<header class="header">
+    <div class="container header__inner">
+        <a href="#home" class="logo">Белый день</a>
+
+        <nav class="nav" id="nav">
+            <a href="#home">Главная</a>
+            <a href="#about">О нас</a>
+            <a href="#services">Услуги</a>
+            <a href="#process">Как мы работаем</a>
+            <a href="#portfolio">Портфолио</a>
+        </nav>
+
+        <span class="header__phone">Демонстрационный сайт</span>
+
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="container hero__content">
+        <p class="section-label">СВАДЕБНОЕ АГЕНТСТВО</p>
+
+        <h1>Делаем стильные свадьбы<br>на любой бюджет</h1>
+
+        <p class="hero__description">
+            Вызовем для вас такси до места встречи,
+            познакомимся и обсудим свадьбу вашей мечты.
+        </p>
+
+<button
+    class="btn"
+    type="button"
+    id="openMeetingModal"
+>
+    Обсудить встречу
+</button>
+    </div>
+</section>
+
+<section class="about section" id="about">
+    <div class="container">
+        <p class="section-label">ПОЧЕМУ МЫ?</p>
+
+        <h2>
+            Свадьба с нами дешевле и проще,<br>
+            чем свадьба без нас
+        </h2>
+
+        <div class="advantages">
+
+    <article class="card">
+        <div class="card__top">
+            <span class="card__number">01</span>
+            <span class="card__icon">♡</span>
+        </div>
+
+        <h3>Выгодные условия от подрядчиков</h3>
+
+        <p>
+            Все площадки и подрядчики заинтересованы работать
+            с агентством. Благодаря постоянному объёму заказов
+            мы получаем специальные условия и предлагаем их клиентам.
+        </p>
+
+        <span class="card__tag">Экономия бюджета</span>
+    </article>
+
+
+    <article class="card card--accent">
+        <div class="card__top">
+            <span class="card__number">02</span>
+            <span class="card__icon">₽</span>
+        </div>
+
+        <h3>Наш гонорар уже входит в бюджет</h3>
+
+        <p>
+            Расходы на наши услуги входят в согласованный бюджет.
+            Вам не потребуется дополнительно увеличивать стоимость
+            мероприятия.
+        </p>
+
+        <span class="card__tag">Без скрытых расходов</span>
+    </article>
+
+
+    <article class="card">
+        <div class="card__top">
+            <span class="card__number">03</span>
+            <span class="card__icon">✦</span>
+        </div>
+
+        <h3>Предложим лучшие варианты</h3>
+
+        <p>
+            Подбираем площадки и специалистов под формат мероприятия,
+            стиль, количество гостей и финансовые возможности пары.
+        </p>
+
+        <span class="card__tag">Индивидуальный подбор</span>
+    </article>
+
+</div>
+    </div>
+</section>
+
+<section class="services section" id="services">
+    <div class="container">
+        <p class="section-label">УСЛУГИ</p>
+        <h2>Организация свадьбы под ключ</h2>
+
+        <p class="section-intro">
+            Мы решим все организационные вопросы и будем рядом
+            с вами от первой встречи до завершения свадебного дня.
+        </p>
+
+        <div class="services__grid">
+
+            <article class="service">
+                <span>01</span>
+                <h3>Организация свадьбы под ключ</h3>
+                <p>
+                    Полностью организуем свадебный день: концепция,
+                    площадка, подрядчики, тайминг, координация
+                    и решение организационных вопросов.
+                </p>
+                <p class="price">Гонорар — 10% от бюджета свадьбы</p>
+                <a href="#meetingModal" data-open-meeting>Заказать →</a>
+            </article>
+
+            <article class="service">
+                <span>02</span>
+                <h3>Подбор идеальной площадки</h3>
+                <p>
+                    Подберём несколько площадок с учётом количества
+                    гостей, расположения, бюджета и концепции свадьбы.
+                </p>
+                <p class="price">5 000 ₽</p>
+                <a href="#meetingModal" data-open-meeting>Заказать →</a>
+            </article>
+
+            <article class="service">
+                <span>03</span>
+                <h3>Ведущий, музыка и шоу</h3>
+                <p>
+                    Предложим ведущего, DJ, музыкальную группу,
+                    артистов и шоу-программу под атмосферу мероприятия.
+                </p>
+                <p class="price">5 000 ₽</p>
+                <a href="#meetingModal" data-open-meeting>Заказать →</a>
+            </article>
+
+            <article class="service">
+                <span>04</span>
+                <h3>Фотограф и видеограф</h3>
+                <p>
+                    Подберём специалистов в нужной стилистике,
+                    покажем портфолио и поможем согласовать условия.
+                </p>
+                <p class="price">5 000 ₽</p>
+                <a href="#meetingModal" data-open-meeting>Заказать →</a>
+            </article>
+
+            <article class="service">
+                <span>05</span>
+                <h3>Координатор</h3>
+                <p>
+                    Контролирует подрядчиков и тайминг,
+                    встречает гостей и решает организационные
+                    вопросы непосредственно в день свадьбы.
+                </p>
+                <p class="price">10 000 ₽</p>
+                <a href="#meetingModal" data-open-meeting>Заказать →</a>
+            </article>
+
+            <article class="service">
+                <span>06</span>
+                <h3>Аудит свадебного дня</h3>
+                <p>
+                    Проверим самостоятельно подготовленную свадьбу,
+                    выявим риски и предложим способы их устранения.
+                </p>
+                <p class="price">5 000 ₽</p>
+                <a href="#meetingModal" data-open-meeting>Заказать →</a>
+            </article>
+<article class="service service--webinar">
+    <span>07</span>
+
+    <h3>
+        Вебинар «Как оптимизировать свадебный бюджет,
+        не потеряв в качестве»
+    </h3>
+
+    <p>
+        Вебинар подойдёт всем, кто планирует свадьбу
+        с любым бюджетом.
+    </p>
+
+    <ul class="service__list">
+        <li>На вебинаре вы узнаете:</li>
+        <li>20 способов грамотно сэкономить, не потеряв в качестве</li>
+        <li>То, на чём никогда нельзя экономить</li>
+    </ul>
+
+    <p class="price">1 000 ₽</p>
+
+    <a href="#meetingModal" data-open-meeting>Заказать →</a>
+</article>
+        </div>
+    </div>
+</section>
+
+<section class="process section" id="process">
+    <div class="container">
+        <p class="section-label">ЭТАПЫ</p>
+        <h2>Как мы работаем</h2>
+
+        <div class="timeline">
+
+            <div class="timeline__item">
+                <span>01</span>
+                <div>
+                    <h3>Встреча — 1 день</h3>
+                    <p>
+                        Знакомимся, обсуждаем ваши пожелания,
+                        концепцию и предварительный бюджет.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline__item">
+                <span>02</span>
+                <div>
+                    <h3>Заключение договора — 1 день</h3>
+                    <p>
+                        Фиксируем перечень работ, бюджет,
+                        сроки и ответственность сторон.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline__item">
+                <span>03</span>
+                <div>
+                    <h3>Подготовка — от 10 дней до 10 месяцев</h3>
+                    <p>
+                        Разрабатываем концепцию, подбираем площадку,
+                        ведущего, фотографа, декораторов и других специалистов.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline__item">
+                <span>04</span>
+                <div>
+                    <h3>Проведение свадьбы — 1 день</h3>
+                    <p>
+                        Координируем мероприятие от встречи
+                        первого подрядчика до завершения программы.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline__item">
+                <span>05</span>
+                <div>
+                    <h3>Сдача материалов — до 1 месяца</h3>
+                    <p>
+                        Контролируем передачу готовых фото
+                        и видеоматериалов.
+                    </p>
+                </div>
+            </div>
+<!-- Сноска после этапов -->
+<div class="process__note">
+
+    <div class="process__note-content">
+
+        <span class="process__note-label">
+            СВЯЖИТЕСЬ С НАМИ
+        </span>
+
+        <h3>
+            Остались вопросы по организации свадьбы?
+        </h3>
+
+        <p>В рабочей версии здесь будут контакты и мессенджеры вашего агентства.</p>
+    </div>
+    <a href="#meetingModal" data-open-meeting class="btn">Посмотреть форму</a>
+
+</div>
+        </div>
+    </div>
+</section>
+
+
+<section class="portfolio section" id="portfolio">
+    <div class="container">
+
+        <p class="section-label">ПОРТФОЛИО</p>
+        <h2>Истории наших пар</h2>
+
+        <p class="portfolio__intro">Примеры оформления портфолио. Имена, описания и результаты ниже — демонстрационные истории, а не подтверждённые проекты агентства.</p>
+
+        <div class="portfolio__stories">
+
+            <!-- ПАРА 1 -->
+            <article class="story">
+
+                <div class="story__image">
+                    <img src="images/portfolio-1.jpg"
+                         alt="Свадьба Георгия и Анны">
+                </div>
+
+                <div class="story__content">
+
+                    <span class="story__number">01</span>
+
+                    <h3>Георгий и Анна</h3>
+
+                    <span class="story__type">
+                        Классическая свадьба • 50 гостей
+                    </span>
+
+                    <p>
+                        Георгий и Анна обратились в агентство «Белый день»
+                        за два месяца до свадьбы. Они уже определились
+                        со стилем торжества, но нуждались в помощи
+                        с поиском площадки и специалистов.
+                    </p>
+
+                    <p>
+                        Мы подобрали банкетный зал, ведущего и фотографа,
+                        разработали тайминг и полностью организовали
+                        свадебный день.
+                    </p>
+
+                    <div class="story__result">
+                        <strong>Результат</strong>
+                        <p>
+                            Светлая классическая свадьба на 50 гостей,
+                            организованная в рамках установленного бюджета.
+                        </p>
+                    </div>
+
+                </div>
+            </article>
+
+
+            <!-- ПАРА 2 -->
+            <article class="story">
+
+                <div class="story__image">
+                    <img src="images/portfolio-2.jpg"
+                         alt="Свадьба Дарьи и Кирилла">
+                </div>
+
+                <div class="story__content">
+
+                    <span class="story__number">02</span>
+
+                    <h3>Дарья и Кирилл</h3>
+
+                    <span class="story__type">
+                        Загородная свадьба • 35 гостей
+                    </span>
+
+                    <p>
+                        Дарья и Кирилл хотели провести небольшую свадьбу
+                        вдали от города в окружении близких людей.
+                        Основным пожеланием была спокойная и уютная
+                        атмосфера.
+                    </p>
+
+                    <p>
+                        Мы нашли загородную площадку, организовали
+                        выездную церемонию, подобрали декораторов,
+                        фотографа и музыкальное сопровождение.
+                    </p>
+
+                    <div class="story__result">
+                        <strong>Результат</strong>
+                        <p>
+                            Камерная свадьба на природе с церемонией
+                            и праздничным ужином для самых близких.
+                        </p>
+                    </div>
+
+                </div>
+            </article>
+
+
+            <!-- ПАРА 3 -->
+            <article class="story">
+
+                <div class="story__image">
+                    <img src="images/portfolio-3.jpg"
+                         alt="Свадьба Марины и Дмитрия">
+                </div>
+
+                <div class="story__content">
+
+                    <span class="story__number">03</span>
+
+                    <h3>Марина и Дмитрий</h3>
+
+                    <span class="story__type">
+                        Современная свадьба • 70 гостей
+                    </span>
+
+                    <p>
+                        Пара обратилась к нам без готовой концепции.
+                        Главным пожеланием была современная свадьба
+                        без большого количества традиционных конкурсов
+                        и стандартных решений.
+                    </p>
+
+                    <p>
+                        Команда агентства разработала концепцию,
+                        подобрала площадку, декораторов, ведущего,
+                        фотографа и технических специалистов.
+                    </p>
+
+                    <div class="story__result">
+                        <strong>Результат</strong>
+                        <p>
+                            Современный праздник для 70 гостей
+                            с торжественной церемонией и вечерней программой.
+                        </p>
+                    </div>
+
+                </div>
+            </article>
+
+
+            <!-- ПАРА 4 -->
+            <article class="story">
+
+                <div class="story__image">
+                    <img src="images/portfolio-4.jpg"
+                         alt="Свадьба Ирины и Алексея">
+                </div>
+
+                <div class="story__content">
+
+                    <span class="story__number">04</span>
+
+                    <h3>Ирина и Алексей</h3>
+
+                    <span class="story__type">
+                        Камерная свадьба • 25 гостей
+                    </span>
+
+                    <p>
+                        Ирина и Алексей начали подготовку самостоятельно,
+                        но перед свадьбой поняли, что им необходима
+                        профессиональная координация мероприятия.
+                    </p>
+
+                    <p>
+                        Мы проверили договорённости с подрядчиками,
+                        скорректировали тайминг и взяли под контроль
+                        проведение всего свадебного дня.
+                    </p>
+
+                    <div class="story__result">
+                        <strong>Результат</strong>
+                        <p>
+                            Молодожёны смогли провести весь день вместе
+                            с гостями, не отвлекаясь на организационные вопросы.
+                        </p>
+                    </div>
+
+                </div>
+            </article>
+        </div> <!-- /portfolio__stories -->
+<!-- =========================================
+     БЛОКИ ПОСЛЕ ПОРТФОЛИО
+========================================= -->
+
+<div class="portfolio-extra">
+
+    <!-- INSTAGRAM -->
+    <div class="instagram-box">
+
+        <div class="instagram-box__left">
+
+            <span class="instagram-box__label">
+                БОЛЬШЕ ИСТОРИЙ
+            </span>
+
+            <h3>
+                Как может выглядеть ваше портфолио
+            </h3>
+
+        </div>
+
+        <a href="#portfolio" class="instagram-box__link"><span class="instagram-box__text">Посмотреть примеры историй</span><span class="instagram-box__arrow">↑</span></a>
+
+    </div>
+
+
+    <!-- ПОДПИСКА -->
+    <div class="subscribe-box">
+
+        <div class="subscribe-box__text">
+
+            <span class="subscribe-box__label">
+                ПОДПИСКА
+            </span>
+
+            <h3>
+                Получайте свадебное вдохновение
+            </h3>
+
+            <p>
+                Идеи, советы и полезные подборки
+                для подготовки к вашей свадьбе.
+            </p>
+
+        </div>
+
+        <form class="subscribe-box__form" aria-describedby="subscribeStatus">
+
+            <input
+                type="email"
+                name="email"
+                placeholder="demo@example.com" aria-label="Демонстрационный e-mail"
+                required
+            >
+
+            <button type="submit">
+                Проверить форму
+            </button>
+
+        </form>
+<p id="subscribeStatus" role="status">Демо: адрес не сохраняется и подписка не оформляется.</p>
+    </div>
+
+</div>
+    </div> <!-- /container -->
+</section> <!-- /portfolio -->
+
+</main>
+
+<footer class="footer">
+    <div class="container footer__inner">
+
+        <div>
+            <a href="#home" class="logo logo--light">
+                Белый день
+            </a>
+
+            <p>
+                Стильные свадьбы на любой бюджет
+            </p>
+        </div>
+
+        <div>
+            <p>Связаться с нами</p>
+
+            <span>Контакты вашего агентства</span>
+        </div>
+
+        <div>
+            <p>Навигация</p>
+
+            <a href="#services">Услуги</a>
+            <a href="#process">Как мы работаем</a>
+            <a href="#portfolio">Портфолио</a>
+        </div>
+
+    </div>
+</footer>
+
+
+<!-- =============================================
+     МОДАЛЬНОЕ ОКНО
+============================================= -->
+
+<div class="meeting-modal" id="meetingModal" role="dialog" aria-modal="true" aria-labelledby="meetingTitle" aria-describedby="meetingDescription" aria-hidden="true">
+
+    <!-- Затемнение -->
+    <div class="meeting-modal__overlay"></div>
+
+
+    <!-- Окно -->
+    <div class="meeting-modal__window">
+
+        <!-- Закрыть -->
+        <button
+            class="meeting-modal__close"
+            id="closeMeetingModal"
+            type="button"
+            aria-label="Закрыть"
+        >
+            ×
+        </button>
+
+
+        <span class="meeting-modal__label">
+            ОБСУДИМ ВАШУ СВАДЬБУ
+        </span>
+
+
+        <h2 id="meetingTitle">
+            Пример заявки
+        </h2>
+
+
+        <p class="meeting-modal__description" id="meetingDescription">Проверьте работу формы на вымышленных данных. Это демоверсия: данные никуда не отправляются и не сохраняются.</p>
+
+
+        <form
+            class="meeting-form"
+            id="meetingForm"
+        >
+
+            <!-- Имя -->
+
+            <div class="meeting-form__field">
+
+                <label for="meetingName">
+                    Ваше имя
+                </label>
+
+                <input
+                    id="meetingName"
+                    type="text"
+                    name="name"
+                    placeholder="Например, Анна" maxlength="80"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Телефон -->
+
+            <div class="meeting-form__field">
+
+                <label for="meetingPhone">
+                    Номер телефона
+                </label>
+
+                <input
+                    id="meetingPhone"
+                    type="tel"
+                    name="phone"
+                    placeholder="+7 (900) 000-00-00" inputmode="tel" minlength="7" maxlength="24"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Проверка демонстрационной формы -->
+
+            <button
+                class="meeting-form__submit"
+                type="submit"
+            >
+                Проверить форму
+
+                <span>→</span>
+            </button>
+
+        <p id="meetingStatus" role="status"></p>
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

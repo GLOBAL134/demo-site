@@ -1,0 +1,2489 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+    --dark: #252525;
+    --black: #111111;
+    --white: #ffffff;
+    --gray: #f2f0ed;
+    --accent: #d8c5b6;
+    --muted: #777;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    color: var(--black);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.container {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.section {
+    padding: 110px 0;
+}
+
+.section-label {
+    margin-bottom: 18px;
+    color: #89786c;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .16em;
+}
+
+h1 {
+    max-width: 900px;
+    font-size: clamp(48px, 6vw, 88px);
+    line-height: 1.03;
+    letter-spacing: -.055em;
+}
+
+h2 {
+    margin-bottom: 40px;
+    font-size: clamp(36px, 4.5vw, 64px);
+    line-height: 1.07;
+    letter-spacing: -.045em;
+}
+
+h3 {
+    line-height: 1.25;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 58px;
+    padding: 0 30px;
+    border: 1px solid var(--black);
+    background: var(--black);
+    color: white;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--black);
+}
+
+.header {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    background: rgba(255,255,255,.94);
+    border-bottom: 1px solid #e9e9e9;
+    backdrop-filter: blur(15px);
+}
+
+.header__inner {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.logo {
+    margin-right: auto;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: .12em;
+}
+
+.nav {
+    display: flex;
+    gap: 28px;
+}
+
+.nav a,
+.header__phone {
+    font-size: 14px;
+}
+
+.nav a:hover {
+    color: #89786c;
+}
+
+.burger {
+    display: none;
+    border: 0;
+    background: none;
+}
+
+.burger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    margin: 5px;
+    background: var(--black);
+}
+
+.hero {
+    min-height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.52)),
+        url("../images/hero.jpg") center/cover;
+}
+
+.hero__description {
+    max-width: 560px;
+    margin: 32px 0;
+    font-size: 18px;
+}
+
+.about {
+    background: var(--gray);
+}
+
+.advantages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+
+    margin-top: 55px;
+
+    background: transparent;
+}
+
+
+/* Карточка */
+
+.service {
+    position: relative;
+
+    min-height: 360px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: none;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+}
+
+.service:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .08);
+}
+
+/* Верх карточки */
+
+.card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 60px;
+}
+
+
+/* Номер */
+
+.card__number {
+    color: #9f8f83;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: .1em;
+}
+.service > span {
+    display: block;
+
+    margin-bottom: 55px;
+
+    color: #a38e7d;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: .1em;
+}
+
+/* Иконка */
+
+.card__icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #f2eee9;
+
+    border-radius: 50%;
+
+    color: #9b7e68;
+
+    font-size: 23px;
+}
+
+
+/* Заголовок */
+
+.card h3 {
+    max-width: 270px;
+
+    margin: 0 0 20px;
+
+    font-size: 24px;
+    line-height: 1.2;
+
+    letter-spacing: -.02em;
+}
+
+
+/* Описание */
+
+.card p {
+    margin-bottom: 30px;
+
+    color: #666;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Нижняя плашка */
+
+.card__tag {
+    width: max-content;
+
+    margin-top: auto;
+
+    padding: 9px 15px;
+
+    background: #f3f0ec;
+
+    border-radius: 30px;
+
+    color: #76675d;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+
+/* ==========================
+   АКЦЕНТНАЯ КАРТОЧКА
+   ========================== */
+
+.service:first-child {
+    background: #272624;
+    color: white;
+}
+
+.service:first-child h3 {
+    color: white;
+}
+
+.service:first-child p {
+    color: #c9c7c3;
+}
+
+.service:first-child .price {
+    color: white;
+}
+
+.service:first-child > span {
+    color: #d8c5b6;
+}
+
+.service:first-child > a {
+    background: #d8c5b6;
+    color: #222;
+}
+
+/* ==========================
+   ПЛАНШЕТ
+   ========================== */
+
+@media (max-width: 900px) {
+
+    .advantages {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 320px;
+    }
+
+}
+
+
+/* ==========================
+   ТЕЛЕФОН
+   ========================== */
+
+@media (max-width: 420px) {
+
+    .advantages {
+        gap: 14px;
+        margin-top: 35px;
+    }
+
+    .card {
+        min-height: 330px;
+        padding: 25px;
+
+        border-radius: 14px;
+    }
+
+    .card__top {
+        margin-bottom: 40px;
+    }
+
+    .card h3 {
+        font-size: 22px;
+    }
+
+}
+
+.section-intro {
+    max-width: 680px;
+    margin: -15px 0 60px;
+    color: var(--muted);
+    font-size: 18px;
+}
+.services {
+    background: #f5f2ee;
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+    margin-top: 55px;
+
+    border: none;
+}
+
+.service {
+    min-height: 350px;
+    padding: 42px;
+    border-right: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+}
+
+.service:nth-child(2n) {
+    border-right: 0;
+}
+
+.service h3 {
+    max-width: 430px;
+
+    margin: 0 0 18px;
+
+    font-size: 28px;
+    line-height: 1.15;
+
+    letter-spacing: -.03em;
+}
+
+
+/* Описание */
+
+.service p {
+    max-width: 470px;
+
+    color: #666;
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* Стоимость */
+
+.service .price {
+    margin: auto 0 15px;
+
+    padding-top: 25px;
+
+    color: #111;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* Кнопка */
+
+.service > a {
+    width: max-content;
+
+    padding: 10px 18px;
+
+    background: #111;
+
+    border: none;
+    border-radius: 50px;
+
+    color: white;
+
+    font-size: 12px;
+
+    transition: .3s;
+}
+
+.service > a:hover {
+    background: #d8c5b6;
+    color: #111;
+}
+
+/* Список внутри карточки услуги */
+
+.service__list {
+    max-width: 470px;
+
+    margin: 15px 0 20px;
+    padding-left: 20px;
+
+    color: #666;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    transition: color .35s ease;
+}
+
+.service__list li {
+    margin-bottom: 5px;
+}
+
+/* При наведении карточки список тоже светлеет */
+
+.service:hover .service__list {
+    color: #c9c7c3;
+}
+
+/* Список внутри карточки услуги */
+
+.service__list {
+    max-width: 470px;
+
+    margin: 15px 0 20px;
+    padding-left: 20px;
+
+    color: #666;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    transition: color .35s ease;
+}
+
+.service__list li {
+    margin-bottom: 5px;
+}
+
+/* При наведении карточки список тоже светлеет */
+
+.service:hover .service__list {
+    color: #c9c7c3;
+}
+.process {
+    background: var(--dark);
+    color: white;
+}
+
+.process .section-label {
+    color: #ccc;
+}
+
+.timeline {
+    max-width: 850px;
+}
+
+.timeline__item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    padding: 35px 0;
+    border-top: 1px solid #555;
+}
+
+.timeline__item span {
+    color: #aaa;
+}
+
+.timeline__item h3 {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.timeline__item p {
+    color: #c8c8c8;
+}
+/* =====================================================
+   СНОСКА ПОСЛЕ ЭТАПОВ
+===================================================== */
+
+.process__note {
+    max-width: 900px;
+
+    margin-top: 55px;
+    padding: 38px 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    background: #353535;
+
+    border: 1px solid #505050;
+    border-radius: 18px;
+}
+
+
+.process__note-content {
+    max-width: 620px;
+}
+
+
+.process__note-label {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #d8c5b6;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: .14em;
+}
+
+
+.process__note h3 {
+    margin-bottom: 12px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+}
+
+
+.process__note p {
+    color: #c4c4c4;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* QR */
+
+.process__qr {
+    width: 120px;
+    height: 120px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 9px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.process__qr img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+.process__qr:hover {
+    transform: scale(1.06);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .25);
+}
+/* ==============================
+   ПОРТФОЛИО — ФОТО 4:4 + ИСТОРИЯ
+   ============================== */
+
+.portfolio__intro {
+    max-width: 750px;
+    margin: -15px 0 60px;
+    color: #666;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.portfolio__stories {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+/* Одна история */
+
+.story {
+    display: grid;
+
+    /* фото немного больше текста */
+    grid-template-columns: 55% 45%;
+
+    align-items: center;
+    gap: 50px;
+}
+
+
+/* ФОТОГРАФИЯ */
+
+.story__image {
+    width: 100%;
+
+    /* Главное — соотношение 3:3 */
+    aspect-ratio: 3 / 3;
+
+    overflow: hidden;
+    background: #eee;
+}
+
+.story__image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    /* Фото обрезается до 4:3 */
+    object-fit: cover;
+
+    transition: transform .5s ease;
+}
+
+.story:hover .story__image img {
+    transform: scale(1.02);
+}
+
+
+/* ТЕКСТ */
+
+.story__content {
+    padding: 20px 0;
+}
+
+.story__number {
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: #a38e7d;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: .15em;
+}
+
+.story__content h3 {
+    margin-bottom: 8px;
+
+    font-size: 36px;
+    line-height: 1.15;
+
+    letter-spacing: -.03em;
+}
+
+.story__type {
+    display: block;
+
+    margin-bottom: 28px;
+
+    color: #887668;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.story__content > p {
+    margin-bottom: 16px;
+
+    color: #555;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+/* =====================================================
+   ССЫЛКА НА СОЦИАЛЬНЫЕ СЕТИ ПОСЛЕ ПОРТФОЛИО
+===================================================== */
+
+.portfolio__social {
+    margin-top: 5px;
+    padding: 45px 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    background: #252525;
+
+    border-radius: 18px;
+
+    color: #ffffff;
+}
+
+
+.portfolio__social p {
+    color: #bdbdbd;
+
+    font-size: 20px;
+}
+
+
+.portfolio__social-link {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    transition: color .3s ease;
+}
+
+
+.portfolio__social-link span {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    background: #d8c5b6;
+
+    border-radius: 50%;
+
+    color: #111111;
+
+    font-size: 20px;
+
+    transition:
+        transform .3s ease,
+        background-color .3s ease;
+}
+
+
+.portfolio__social-link:hover {
+    color: #d8c5b6;
+}
+
+
+.portfolio__social-link:hover span {
+    transform: translateX(5px);
+
+    background: #ffffff;
+}
+
+/* РЕЗУЛЬТАТ */
+
+.story__result {
+    margin-top: 25px;
+
+    padding: 20px 0 0;
+
+    border-top: 1px solid #ddd;
+}
+
+.story__result strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.story__result p {
+    color: #333;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   ПЛАНШЕТ
+   ============================== */
+
+@media (max-width: 900px) {
+
+    .story {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .story__content {
+        padding: 0;
+    }
+
+    .story__content h3 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* ==============================
+   МОБИЛЬНАЯ ВЕРСИЯ 380–400px
+   ============================== */
+
+@media (max-width: 420px) {
+
+    .portfolio__intro {
+        margin-bottom: 40px;
+
+        font-size: 15px;
+    }
+
+    .portfolio__stories {
+        gap: 60px;
+    }
+
+    .story {
+        display: block;
+    }
+
+    /* На телефоне фотография
+       также остаётся строго 4:3 */
+
+    .story__image {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+
+        margin-bottom: 25px;
+    }
+
+    .story__content {
+        padding: 0;
+    }
+
+    .story__number {
+        margin-bottom: 15px;
+    }
+
+    .story__content h3 {
+        font-size: 29px;
+    }
+
+    .story__type {
+        margin-bottom: 20px;
+
+        font-size: 11px;
+    }
+
+    .story__content > p {
+        font-size: 14px;
+    }
+
+}
+.subscribe {
+    background: var(--accent);
+}
+
+.subscribe__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: end;
+}
+
+.subscribe__inner h2 {
+    margin: 0;
+    font-size: 44px;
+}
+
+.subscribe__form {
+    display: flex;
+}
+
+.subscribe input,
+.contact__form input {
+    width: 100%;
+    min-height: 58px;
+    padding: 0 18px;
+    border: 1px solid #999;
+    background: white;
+    outline: 0;
+}
+
+.contact__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.contact__inner > div p:last-child {
+    max-width: 500px;
+    color: #666;
+}
+
+.contact__form {
+    display: grid;
+    gap: 15px;
+}
+
+.checkbox {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin: 8px 0;
+    font-size: 12px;
+    color: #777;
+}
+
+.checkbox input {
+    width: auto;
+    min-height: auto;
+    margin-top: 4px;
+}
+
+.footer {
+    padding: 70px 0;
+    background: #181818;
+    color: white;
+}
+
+.footer__inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+}
+
+.footer p {
+    margin: 8px 0;
+    color: #999;
+}
+
+.footer__inner > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo--light {
+    color: white;
+}
+
+@media (max-width: 800px) {
+.service--webinar {
+    grid-column: auto;
+}
+    .container {
+        width: min(100% - 32px, 600px);
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .header__phone {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        padding: 25px 16px;
+        background: white;
+        flex-direction: column;
+        border-top: 1px solid #eee;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 720px;
+        background-position: 62% center;
+    }
+
+    h1 {
+        font-size: clamp(43px,12vw,66px);
+    }
+
+    .hero__description {
+        max-width: 400px;
+    }
+
+    .advantages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+
+    margin-top: 55px;
+
+    background: transparent;
+}
+
+    .service {
+        border-right: 0;
+    }
+
+    .card {
+        min-height: 280px;
+    }
+
+    .portfolio__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio figure:nth-child(3n) {
+        grid-column: auto;
+    }
+
+    .portfolio img {
+        height: 470px;
+    }
+
+    .subscribe__form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact__inner {
+        gap: 50px;
+    }
+
+    .footer__inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .header__inner {
+        min-height: 65px;
+    }
+
+    .nav {
+        top: 65px;
+    }
+
+    .hero {
+        min-height: 690px;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .hero__description {
+        font-size: 16px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .card,
+    .service {
+        padding: 28px 22px;
+    }
+
+    .card h3 {
+        margin-top: 35px;
+    }
+
+    .service h3 {
+        font-size: 24px;
+    }
+
+    .timeline__item {
+        grid-template-columns: 45px 1fr;
+    }
+
+    .portfolio img {
+        height: 420px;
+    }
+
+    .subscribe__inner h2 {
+        font-size: 34px;
+    }
+}
+/* Карточка становится чёрной при наведении */
+.about .card:hover {
+    background: #111111 !important;
+    color: #ffffff;
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .15);
+}
+
+
+/* Заголовок становится белым */
+.about .card:hover h3 {
+    color: #ffffff;
+}
+
+
+/* Описание становится светло-серым */
+.about .card:hover p {
+    color: #cccccc;
+}
+
+
+/* Номер */
+.about .card:hover .card__number {
+    color: #d8c5b6;
+}
+
+
+/* Круг с иконкой */
+.about .card:hover .card__icon {
+    background: #d8c5b6;
+    color: #111111;
+}
+
+
+/* Нижняя плашка */
+.about .card:hover .card__tag {
+    background: rgba(255, 255, 255, .12);
+    color: #ffffff;
+}
+/* ==================================================
+   БЛОК "ПОЧЕМУ МЫ"
+   ================================================== */
+
+.about {
+    background: #f5f2ee;
+}
+
+
+/* Контейнер карточек */
+
+.about .advantages {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 55px;
+
+    background: transparent;
+}
+
+
+/* САМА КАРТОЧКА */
+
+.about .card {
+    position: relative;
+
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 32px;
+
+    background: #ffffff !important;
+
+    border: 1px solid #e4dfd9;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+    opacity: 1;
+}
+
+
+/* Эффект при наведении */
+
+.about .card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, .08);
+}
+
+
+/* ==================================================
+   ВЕРХНЯЯ ЧАСТЬ
+   ================================================== */
+
+.about .card__top {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 55px;
+}
+
+
+/* Номер */
+
+.about .card__number {
+    color: #a68c79;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: .08em;
+}
+
+
+/* Иконка */
+
+.about .card__icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f6f1ec;
+
+    border-radius: 50%;
+
+    color: #a98264;
+
+    font-size: 22px;
+}
+
+
+/* ==================================================
+   ТЕКСТ
+   ================================================== */
+
+.about .card h3 {
+    max-width: 300px;
+
+    margin: 0 0 18px 0;
+
+    color: #111111;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    letter-spacing: -.02em;
+}
+
+
+.about .card p {
+    max-width: 330px;
+
+    margin: 0 0 25px 0;
+
+    color: #686868;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ==================================================
+   НИЖНЯЯ ПЛАШКА
+   ================================================== */
+
+.about .card__tag {
+    width: fit-content;
+
+    display: inline-block;
+
+    margin-top: auto;
+
+    padding: 9px 15px;
+
+    background: #f4efea;
+
+    border-radius: 50px;
+
+    color: #806c5d;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: .04em;
+}
+
+/* ==================================================
+   ДЕКОР В ПРАВОМ НИЖНЕМ УГЛУ
+   ================================================== */
+
+.about .card::after {
+    content: "";
+
+    position: absolute;
+
+    right: -55px;
+    bottom: -65px;
+
+    width: 150px;
+    height: 150px;
+
+    border: 1px solid rgba(159, 143, 131, .14);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.about .card.card--accent::after {
+    border-color: rgba(255, 255, 255, .08);
+}
+
+
+/* ==================================================
+   ПЛАНШЕТ
+   ================================================== */
+
+@media (max-width: 900px) {
+
+    .about .advantages {
+        grid-template-columns: 1fr;
+    }
+
+    .about .card {
+        min-height: 320px;
+    }
+
+}
+
+
+/* ==================================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+   ================================================== */
+
+@media (max-width: 420px) {
+
+    .about .advantages {
+        gap: 15px;
+
+        margin-top: 35px;
+    }
+
+
+    .about .card {
+        min-height: 320px;
+
+        padding: 25px;
+
+        border-radius: 14px;
+    }
+
+
+    .about .card__top {
+        margin-bottom: 35px;
+    }
+
+
+    .about .card h3 {
+        font-size: 21px;
+    }
+
+
+    .about .card p {
+        font-size: 13px;
+    }
+
+}
+/* ==========================================
+   УСЛУГИ — ЧЁРНЫЕ КАРТОЧКИ ПРИ НАВЕДЕНИИ
+   ========================================== */
+
+/* Плавная анимация всей карточки */
+.services .service {
+    transition:
+        background-color .35s ease,
+        color .35s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+/* При наведении */
+
+.services .service:hover {
+    background: #292826 !important;
+    color: #ffffff;
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, .12);
+}
+
+
+/* Заголовок */
+
+.services .service:hover h3 {
+    color: #ffffff;
+}
+
+
+/* Обычный текст */
+
+.services .service:hover p {
+    color: #c9c7c3;
+}
+
+
+/* Цена */
+
+.services .service:hover .price {
+    color: #ffffff;
+}
+
+
+/* Маленький номер 01, 02... */
+
+.services .service:hover > span {
+    color: #ffffff;
+}
+
+
+/* Кнопка "Заказать" */
+
+.services .service:hover > a {
+    background: #d8c5b6;
+
+    color: #292826;
+}
+
+
+/* Плавная смена цветов элементов */
+
+.services .service h3,
+.services .service p,
+.services .service .price,
+.services .service > span,
+.services .service > a {
+    transition:
+        color .35s ease,
+        background-color .35s ease;
+}
+/* =====================================================
+   ВЕБИНАР
+===================================================== */
+
+.service__list {
+    max-width: 700px;
+
+    margin: 15px 0 20px;
+    padding-left: 20px;
+
+    color: #666;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    transition: color .35s ease;
+}
+
+.service__list li {
+    margin-bottom: 4px;
+}
+
+/* Вебинар занимает всю ширину */
+
+.service--webinar {
+    grid-column: 1 / -1;
+}
+
+/* Заголовок не растягиваем слишком сильно */
+
+.service--webinar h3 {
+    max-width: 750px;
+}
+
+/* При наведении */
+
+.service--webinar:hover .service__list {
+    color: #c9c7c3;
+}
+/* =====================================================
+   БЛОКИ ПОСЛЕ ПОРТФОЛИО
+===================================================== */
+
+.portfolio-extra {
+    width: 100%;
+
+    margin-top: 45px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* =====================================================
+   INSTAGRAM
+===================================================== */
+
+.instagram-box {
+    width: 100%;
+    min-height: 185px;
+
+    padding: 40px 45px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 420px;
+
+    align-items: center;
+
+    gap: 70px;
+
+    background: #252525;
+
+    border-radius: 18px;
+
+    color: #ffffff;
+}
+
+
+/* Левая часть */
+
+.instagram-box__left {
+    max-width: 500px;
+}
+
+
+.instagram-box__label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #d8c5b6;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: .13em;
+}
+
+
+.instagram-box__left h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/* Правая часть */
+
+.instagram-box__link {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+
+.instagram-box__text {
+    max-width: 280px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+
+/* Стрелка */
+
+.instagram-box__arrow {
+    width: 48px;
+    height: 48px;
+
+    min-width: 48px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #d8c5b6;
+
+    border-radius: 50%;
+
+    color: #111111;
+
+    font-size: 21px;
+
+    transition:
+        transform .3s ease,
+        background-color .3s ease;
+}
+
+
+.instagram-box__link:hover
+.instagram-box__arrow {
+
+    transform: translateX(5px);
+
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   ПОДПИСКА
+===================================================== */
+
+.subscribe-box {
+    width: 100%;
+    min-height: 190px;
+
+    padding: 40px 45px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 500px;
+
+    align-items: center;
+
+    gap: 70px;
+
+    background: #d8c5b6;
+
+    border-radius: 18px;
+
+    color: #111111;
+}
+
+
+/* Левая часть */
+
+.subscribe-box__text {
+    max-width: 500px;
+}
+
+
+.subscribe-box__label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #756457;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: .13em;
+}
+
+
+.subscribe-box__text h3 {
+    margin: 0 0 8px;
+
+    color: #111111;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+.subscribe-box__text p {
+    margin: 0;
+
+    color: #655b54;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   ФОРМА ПОДПИСКИ
+===================================================== */
+
+.subscribe-box__form {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 165px;
+}
+
+
+.subscribe-box__form input {
+    width: 100%;
+    height: 58px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+.subscribe-box__form button {
+    height: 58px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease;
+}
+
+
+.subscribe-box__form button:hover {
+    background: #252525;
+
+    color: #d8c5b6;
+}
+/* =====================================================
+   БЛОКИ ПОСЛЕ ПОРТФОЛИО — МОБИЛЬНАЯ ВЕРСИЯ
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .portfolio-extra {
+        margin-top: 30px;
+        gap: 12px;
+    }
+
+
+    /* INSTAGRAM */
+
+    .instagram-box {
+        min-height: 0;
+
+        padding: 28px 24px;
+
+        display: block;
+
+        border-radius: 16px;
+    }
+
+
+    .instagram-box__label {
+        font-size: 11px;
+    }
+
+
+    .instagram-box__left h3 {
+        font-size: 22px;
+    }
+
+
+    .instagram-box__link {
+        margin-top: 28px;
+
+        gap: 20px;
+    }
+
+
+    .instagram-box__text {
+        max-width: 230px;
+
+        font-size: 16px;
+    }
+
+
+    .instagram-box__arrow {
+        width: 44px;
+        height: 44px;
+
+        min-width: 44px;
+
+        font-size: 19px;
+    }
+
+
+    /* ПОДПИСКА */
+
+    .subscribe-box {
+        min-height: 0;
+
+        padding: 28px 24px;
+
+        display: block;
+
+        border-radius: 16px;
+    }
+
+
+    .subscribe-box__label {
+        font-size: 11px;
+    }
+
+
+    .subscribe-box__text h3 {
+        font-size: 21px;
+    }
+
+
+    .subscribe-box__text p {
+        font-size: 13px;
+    }
+
+
+    /* Форма */
+
+    .subscribe-box__form {
+        margin-top: 25px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 9px;
+    }
+
+
+    .subscribe-box__form input,
+    .subscribe-box__form button {
+
+        width: 100%;
+        height: 54px;
+    }
+
+}
+/* =====================================================
+   УСЛУГИ — ИСПРАВЛЕНИЕ МОБИЛЬНОЙ ВЕРСИИ
+===================================================== */
+
+@media (max-width: 600px) {
+
+    /* Вся сетка услуг в одну колонку */
+
+    .services .services__grid {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        width: 100% !important;
+
+        gap: 14px !important;
+
+        margin-top: 35px !important;
+    }
+
+
+    /* Каждая карточка занимает всю ширину */
+
+    .services .service {
+        width: 100% !important;
+
+        min-width: 0 !important;
+        max-width: none !important;
+
+        min-height: 0 !important;
+
+        grid-column: 1 !important;
+
+        padding: 28px 24px !important;
+
+        border-radius: 16px !important;
+    }
+
+
+    /* Вебинар тоже одна колонка */
+
+    .services .service--webinar {
+        grid-column: 1 !important;
+    }
+
+
+    /* Номер */
+
+    .services .service > span {
+        margin-bottom: 35px !important;
+
+        font-size: 12px !important;
+    }
+
+
+    /* Заголовок */
+
+    .services .service h3 {
+        width: 100% !important;
+        max-width: none !important;
+
+        margin-bottom: 16px !important;
+
+        font-size: 23px !important;
+
+        line-height: 1.2 !important;
+    }
+
+
+    /* Описание */
+
+    .services .service p {
+        width: 100% !important;
+        max-width: none !important;
+
+        font-size: 14px !important;
+
+        line-height: 1.65 !important;
+    }
+
+
+    /* Список вебинара */
+
+    .services .service__list {
+        width: 100% !important;
+        max-width: none !important;
+
+        padding-left: 18px !important;
+
+        font-size: 14px !important;
+    }
+
+
+    /* Цена */
+
+    .services .service .price {
+        margin-top: 30px !important;
+
+        padding-top: 0 !important;
+
+        font-size: 17px !important;
+
+        line-height: 1.4 !important;
+    }
+
+
+    /* Кнопка */
+
+    .services .service > a {
+        width: max-content !important;
+
+        margin-top: 5px !important;
+
+        padding: 11px 20px !important;
+
+        font-size: 13px !important;
+    }
+
+}
+/* =====================================================
+   МОДАЛЬНОЕ ОКНО — ОБСУДИТЬ ВСТРЕЧУ
+===================================================== */
+
+.meeting-modal {
+    position: fixed;
+
+    z-index: 1000;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease;
+}
+
+
+/* Когда окно открыто */
+
+.meeting-modal.active {
+    visibility: visible;
+
+    opacity: 1;
+}
+
+
+/* Затемнение сайта */
+
+.meeting-modal__overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .72);
+
+    backdrop-filter: blur(4px);
+}
+
+
+/* Само окно */
+
+.meeting-modal__window {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(620px, 100%);
+
+    padding: 48px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, .25);
+
+    transform: translateY(25px);
+
+    transition: transform .3s ease;
+}
+
+
+.meeting-modal.active
+.meeting-modal__window {
+
+    transform: translateY(0);
+}
+
+
+/* Кнопка закрытия */
+
+.meeting-modal__close {
+    position: absolute;
+
+    top: 20px;
+    right: 22px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: #f2f0ed;
+
+    border-radius: 50%;
+
+    color: #111111;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+}
+
+
+.meeting-modal__close:hover {
+    background: #252525;
+
+    color: #ffffff;
+}
+
+
+/* Маленькая подпись */
+
+.meeting-modal__label {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #89786c;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: .14em;
+}
+
+
+/* Заголовок */
+
+.meeting-modal__window h2 {
+    margin: 0 0 15px;
+
+    font-size: 42px;
+
+    line-height: 1.1;
+}
+
+
+/* Описание */
+
+.meeting-modal__description {
+    max-width: 500px;
+
+    margin-bottom: 30px;
+
+    color: #666666;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+}
+
+
+/* =====================================================
+   ФОРМА
+===================================================== */
+
+.meeting-form {
+    display: grid;
+
+    gap: 18px;
+}
+
+
+.meeting-form__field {
+    display: grid;
+
+    gap: 8px;
+}
+
+
+.meeting-form__field label {
+    color: #555;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.meeting-form__field input {
+    width: 100%;
+
+    height: 58px;
+
+    padding: 0 18px;
+
+    border: 1px solid #cccccc;
+
+    background: #ffffff;
+
+    color: #111;
+
+    outline: none;
+
+    transition: border-color .25s ease;
+}
+
+
+.meeting-form__field input:focus {
+    border-color: #111111;
+}
+
+
+/* Чекбокс */
+
+.meeting-form__checkbox {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+.meeting-form__checkbox input {
+    margin-top: 3px;
+}
+
+
+/* Отправить */
+
+.meeting-form__submit {
+    width: 100%;
+
+    min-height: 60px;
+
+    margin-top: 5px;
+
+    padding: 0 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    border: none;
+
+    background: #252525;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+}
+
+
+.meeting-form__submit:hover {
+    background: #d8c5b6;
+
+    color: #111111;
+}
+
+
+/* Запрещаем прокрутку сайта */
+
+body.modal-open {
+    overflow: hidden;
+}
+/* =====================================================
+   МОДАЛЬНОЕ ОКНО — МОБИЛЬНАЯ ВЕРСИЯ
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .meeting-modal {
+        padding: 14px;
+
+        align-items: center;
+    }
+
+
+    .meeting-modal__window {
+        width: 100%;
+
+        max-height: calc(100vh - 28px);
+
+        overflow-y: auto;
+
+        padding: 35px 22px 25px;
+
+        border-radius: 16px;
+    }
+
+
+    .meeting-modal__close {
+        top: 14px;
+        right: 14px;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 24px;
+    }
+
+
+    .meeting-modal__label {
+        padding-right: 45px;
+
+        font-size: 10px;
+    }
+
+
+    .meeting-modal__window h2 {
+        font-size: 31px;
+    }
+
+
+    .meeting-modal__description {
+        margin-bottom: 25px;
+
+        font-size: 13px;
+    }
+
+
+    .meeting-form__field input {
+        height: 54px;
+    }
+
+
+    .meeting-form__submit {
+        min-height: 54px;
+    }
+
+}
+body.modal-open {
+    overflow: hidden;
+}
+
+.meeting-modal {
+    pointer-events: none;
+}
+
+.meeting-modal.active {
+    pointer-events: auto;
+}
+/* Responsive layout and accessible demo controls. */
+.demo-notice { padding: 12px 24px; background: #f2eee9; color: #51443b; text-align: center; font-size: 13px; }
+.story { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); }
+.story > *, .advantages > *, .services__grid > *, .instagram-box > *, .subscribe-box > * { min-width: 0; }
+.instagram-box { grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 36px; }
+.subscribe-box { grid-template-columns: minmax(0, 1fr) minmax(0, 500px); gap: 36px; }
+#subscribeStatus { grid-column: 1 / -1; }
+#meetingStatus { color: #51443b; font-size: 14px; }
+section[id] { scroll-margin-top: 90px; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid #92705a; outline-offset: 4px; }
+.meeting-modal__window { max-height: calc(100dvh - 50px); overflow-y: auto; }
+@media (max-width: 1000px) {
+    .header__inner { gap: 18px; }
+    .nav { gap: 16px; }
+    .header__phone { display: none; }
+}
+@media (max-width: 900px) {
+    .story, .advantages { grid-template-columns: minmax(0, 1fr); }
+    .instagram-box, .subscribe-box { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+}
+@media (max-width: 600px) {
+    .process__note { flex-direction: column; align-items: flex-start; gap: 24px; padding: 28px 24px; }
+    .timeline__item { grid-template-columns: 40px minmax(0, 1fr); }
+    .card__tag { max-width: 100%; white-space: normal; }
+    .portfolio img { height: 100%; }
+    .hero { min-height: 620px; padding: 48px 0; }
+    .demo-notice { padding: 10px 16px; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+}
